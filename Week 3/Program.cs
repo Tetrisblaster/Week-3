@@ -12,7 +12,7 @@ namespace Week_3
         {
 
             //Console.WriteLine("fill in length of array");
-            int a = Convert.ToInt32(Console.ReadLine());//lets user input a value for a and converts that into an integer a.
+            //int a = Convert.ToInt32(Console.ReadLine());//lets user input a value for a and converts that into an integer a.
 
             //int[] arr1 = new int[a];  //starts array and a defines the length of the array.
             //                                                            //between brackets "[]" is the length of an array.
@@ -43,16 +43,70 @@ namespace Week_3
 
 
             Console.ReadKey();
+            
+
+           
+
+            Console.WriteLine("insert number");
 
             int b = Convert.ToInt32(Console.ReadLine());
 
+
+
+            Console.WriteLine("string start");
+
+            
+
             string[] names = new string[b];
 
+            if (b <= 10)
+            {
+
+                Console.WriteLine("fill in names");
+                for (int i = 0; i < names.Length; i++)
+                {
+
+                        names[i] = Console.ReadLine();
+
+                    while (string.IsNullOrEmpty(names[i]))
+                    {
+
+                        Console.WriteLine("input cant be empty");
+
+                        Console.WriteLine(b + " names must be filled in");
+
+                        names[i] = Console.ReadLine();
+
+                        
+                        
+
+                    }
+               
+             
+
+                    
+                    
+                }
+
+                Console.WriteLine("");
+
+                foreach (string character in names)
+                {
+                    Console.WriteLine(character);
+
+                }
 
 
 
 
+            }
 
+            else
+            {
+                Console.WriteLine("not allowed more than 10");
+            }
+
+            
 
 
             Console.ReadKey();//stops program from instantly closing after completing the last loop
